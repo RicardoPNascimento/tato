@@ -1,0 +1,87 @@
+{
+  "name": "tatodois-inserir-empcont-ricardo",
+  "type-id": 2,
+  "friendly-name": "Cadastro de empresa parceira",
+  "description": "Tela para cadastrar uma nova empresa.",
+  "data-connection-id": "DATA_CONNECTION_ID",
+  "settings": {
+    "render-type": "two-columns",
+    "label-position": "top",
+    "sections": [
+      {
+        "title": "Dados da empresa",
+        "name": "Dados da empresa",
+        "fields": [
+          {
+            "name": "partner_company__name",
+            "label": "Nome",
+            "type": "text",
+            "placeholder": "Digite o nome da empresa",
+            "regex": "^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ& ]+$",
+            "required": true,
+            "max-length": 100
+          },
+          {
+            "name": "partner_company__payer",
+            "label": "Forma de pagamento",
+            "type": "select",
+            "required": true,
+            "options": [
+              {
+                "text": "Empresa",
+                "value": "Auxilio empresarial"
+              },
+              {
+                "text": "Funcionário",
+                "value": "Cartão de crédito"
+              },
+              {
+                "text": "Pix",
+                "value": "Pix"
+              }
+            ]
+          },
+          {
+            "name": "partner_company__cnpj",
+            "label": "CNPJ da Empresa",
+            "type": "text",
+            "placeholder": "00.000.000/0000-00",
+            "mask": "00.000.000/0000-00",
+            "hint": "Digite o CNPJ da Empresa",
+            "required": true,
+            "max-length": 18
+         },
+          {
+            "name": "partner_company__zip_code",
+            "label": "CEP",
+            "type": "text",
+            "placeholder": "Digite o CEP.",
+            "regex": "^[0-9-./]+$",
+            "mask": "00.000-000",
+            "required": true,
+            "max-length": 100
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "type": 9,
+        "text": "Cadastrar Empresa",
+        "redirect-screen-name": "tatodois-listar-empresa-ricardo",
+        "query": [
+          {
+            "type": "insert",
+            "tables-query": [
+              "partner_company"
+            ]
+          }
+        ]
+      },
+      {
+        "type": 7,
+        "text": "voltar"
+      }
+    ]
+  }
+}

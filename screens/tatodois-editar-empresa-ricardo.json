@@ -1,0 +1,24 @@
+{
+	"name": "tatodois-editar-empresa-ricardo",
+	"type-id": 1,
+	"friendly-name": "Tela de Edição de Empresa Parceira",
+	"description": "Tela de Edição de Empresa Parceira",
+	"title": "Editar Dados de Empresa Parceira",
+	"settings": {
+        "show-in-menu": false,
+        "category": "Empresas Parceiras",
+        "category-order": 10,
+        "menu-order": 3
+      },
+	"sections": [
+		{
+			"title": "Dados da Empresa",
+			"containers": [
+				{
+					"id": "{tatodois-editar-empcont-ricardo}",
+					"collapsible": false
+				}
+			]
+		}
+	]
+}

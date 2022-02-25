@@ -1,0 +1,111 @@
+{
+  "name": "tatodois-listar-empcont-ricardo",
+  "type-id": 1,
+  "friendly-name": "Listagem de Empresas parceiras",
+  "description": "Listagem de Empresas parceiras",
+  "data-connection-id": "DATA_CONNECTION_ID",
+  "settings": {
+    "columns": [
+      {
+        "name": "partner_company__partner_company_id",
+        "friendly-name": "Id",
+        "default": true,
+        "sort": "desc",
+        "type": "text",
+        "filter": {
+          "active": false
+        }
+      },
+      {
+        "name": "partner_company__name",
+        "friendly-name": "Nome",
+        "type": "text",
+        "filter": {
+          "active": true
+        }
+      },
+      {
+        "name": "partner_company__payer",
+        "friendly-name": "Forma de pagamento",
+        "type": "text",
+        "filter": {
+          "active": true
+        }
+      },
+      {
+        "name": "partner_company__cnpj",
+        "friendly-name": "CNPJ",
+        "type": "cnpj",
+        "filter": {
+          "active": true
+        }
+      },
+      {
+        "name": "partner_company__zip_code",
+        "friendly-name": "CEP",
+        "type": "zipcode",
+        "filter": {
+          "active": true
+        }
+      }
+    ],
+    "query": [{
+      "type": "select",
+      "tables-query": [
+        "partner_company"
+      ],
+      "filter": [
+        {
+          "partner_company__status": {
+            "not-insensitive-like": "deleted"
+          }
+        },
+        {
+          "operator": "and"
+        },
+        {
+          "partner_company__partner_company_id": {
+            "greater-than": 1
+          }
+        }
+      ]
+    }],
+    "actions": [
+      {
+        "type": 3,
+        "redirect-screen-name": "tatodois-editar-empresa-ricardo",
+        "redirect-screen-type": "form",
+        "redirect-identifier": "partner_company__partner_company_id"
+      },
+      {
+        "type": 2,
+        "redirect-screen-name": "tatodois-editar-empresa-ricardo",
+        "redirect-screen-type": "form",
+        "redirect-identifier": "partner_company__partner_company_id"
+      },
+       {
+        "type": 1,
+        "text": "Inserir Empresa",
+        "redirect-screen-name": "tatodois-inserir-empresa-ricardo",
+        "redirect-screen-type": "form"
+      },
+      {
+        "type": 4,
+        "identifier-name": "partner_company__partner_company_id",
+        "query": [{
+          "type": "delete",
+          "tables-query": [
+            "partner_company"
+          ],
+          "filter": [
+            {
+              "partner_company__partner_company_id": {
+                "equals": "{identifier}"
+              }
+            }
+          ]
+        }]
+      }
+    ]
+  }
+}

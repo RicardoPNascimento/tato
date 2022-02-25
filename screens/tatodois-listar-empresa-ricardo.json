@@ -1,0 +1,24 @@
+{
+	"name": "tatodois-listar-empresa-ricardo",
+	"type-id": 1,
+	"friendly-name": "Listagem de empresas",
+	"description": "SerVIEW_ONLY iços",
+	"title": "Listagem de empresas parceiras",
+	"settings": {
+        "show-in-menu": true,
+        "category": "Empresas Parceiras",
+        "category-order": 10,
+        "menu-order": 2
+      },
+	"sections": [
+		{
+			"title": "Empresas Parceiras",
+			"containers": [
+				{
+					"id": "{tatodois-listar-empcont-ricardo}",
+					"collapsible": false
+				}
+			]
+		}
+	]
+}

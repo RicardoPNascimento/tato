@@ -1,0 +1,24 @@
+{
+	"name": "tatodois-inserir-empresa-ricardo",
+	"type-id": 1,
+	"friendly-name": "Tela para inserir empresas parceiras",
+	"description": "Tela para inserir empresas parceiras",
+	"title": "Inserir Empresa Parceira",
+	"settings": {
+        "show-in-menu": true,
+        "category": "Empresas Parceiras",
+        "category-order": 10,
+        "menu-order": 1
+      },
+	"sections": [
+		{
+			"title": "Dados da Empresa",
+			"containers": [
+				{
+					"id": "{tatodois-inserir-empcont-ricardo",
+					"collapsible": false
+				}
+			]
+		}
+	]
+}
