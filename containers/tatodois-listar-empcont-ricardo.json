@@ -62,11 +62,6 @@
         },
         {
           "operator": "and"
-        },
-        {
-          "partner_company__partner_company_id": {
-            "greater-than": 1
-          }
         }
       ]
     }],
@@ -78,12 +73,6 @@
         "redirect-identifier": "partner_company__partner_company_id"
       },
       {
-        "type": 2,
-        "redirect-screen-name": "tatodois-editar-empresa-ricardo",
-        "redirect-screen-type": "form",
-        "redirect-identifier": "partner_company__partner_company_id"
-      },
-       {
         "type": 1,
         "text": "Inserir Empresa",
         "redirect-screen-name": "tatodois-inserir-empresa-ricardo",

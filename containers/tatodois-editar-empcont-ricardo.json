@@ -1,7 +1,7 @@
 {
   "name": "tatodois-editar-empcont-ricardo",
   "type-id": 2,
-  "friendly-name": "Cadastro de empresa parceira",
+  "friendly-name": "Editar empresa parceira",
   "description": "Tela para cadastrar uma nova empresa.",
   "data-connection-id": "DATA_CONNECTION_ID",
   "settings": {
